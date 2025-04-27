@@ -8,14 +8,6 @@ from database.enumur import UserToAI
 router = Router()
 ai_handler = AIHandler()
 
-@router.message(F.text)
-async def echo_handler(message: Message):
-
-    history = await get_user_history(message.from_user.id)
-
-    response = await ai_handler.generate_response(history)
-    await message.answer(response)
-
 
 @router.message(F.text)
 async def echo_handler(message: Message):
@@ -24,12 +16,9 @@ async def echo_handler(message: Message):
 
     history = await get_user_history(user_id)
 
-    print(f"HISRTORY - {history}")
-
     await save_message(user_id, user_message, UserToAI.user)
 
     ai_response = await ai_handler.generate_response(history)
-
 
     await save_message(user_id, ai_response, UserToAI.ai)
 

@@ -7,8 +7,6 @@ from aiogram import Bot, Dispatcher
 
 
 async def main():
-    from database.session import create_tables
-    await create_tables()
 
 
     bot = Bot(token=os.getenv("BOT_TOKEN"))
