@@ -1,0 +1,41 @@
+# Byte-compiled / optimized / DLL files
+__pycache__
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+downloads/
+lib/
+lib64/
+
+# Environments
+.env
+.venv
+venv/
+
+
+# PyCharm
+.idea/
+
+# Git
+.git
+.gitignore
+.github
+
+
+# License / Readme / Other
+LICENSE
+README.md
+**/README*
+
+# Certificates
+*.key
+*.crt
+
+# Configuration
+*.conf
+
+# YAML / YML
+*.yaml
+*.yml
